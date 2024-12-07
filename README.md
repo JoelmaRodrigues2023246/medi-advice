@@ -1,6 +1,3 @@
-Claro! Aqui está o texto formatado e em inglês para você copiar e colar diretamente no seu README do GitHub:
-
-```markdown
 # Medi Advice Website
 
 This is a **proof-of-concept website** developed as part of **Continuous Assessment 2 (CA2)** for the **Cloud Services** module in the **BSc in Computing and Information Technology** program.
@@ -86,8 +83,3 @@ medi-advice/
 **Joelma Rodrigues**  
 Student at CCT College Dublin | **Student Number:** 2023246  
 **Submission Date:** 8th December 2024  
-
----
-```
-
-Agora é só copiar e colar diretamente no seu README.md no GitHub! 😊
