@@ -12,8 +12,14 @@
             <img src="assets/images/logo.png" alt="Medi Advice Logo">
             <span>Medi Advice</span>
         </div>
-        <nav>
-            <ul>
+        
+        <!-- Instance ID Section -->
+        <div id="instance-id-display" style="text-align: center; font-weight: bold; font-size: 1.2rem; margin: 10px 0; color: white;">
+            Loading...
+        </div>
+        
+        <nav style="display: flex; justify-content: center; align-items: center;">
+            <ul style="display: flex; gap: 20px; list-style-type: none; margin: 0; padding: 0; align-items: center;">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -34,7 +40,7 @@
         </div>
     </section>
 
-<!-- Student and CA's details -->
+    <!-- Student and CA's details -->
     <section class="student" id="student">
         <img src="assets/images/CCT_Logo.jpg" alt="CA2 Student" class="student-image">
         <div class="student-content">
@@ -50,5 +56,18 @@
             <p>&copy; 2024 Medi Advice. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Fetch Instance ID from EC2 Metadata
+        fetch('http://169.254.169.254/latest/meta-data/instance-id')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('instance-id-display').innerText = 'Instance ID: ' + data;
+            })
+            .catch(error => {
+                console.error('Error fetching Instance ID:', error);
+                document.getElementById('instance-id-display').innerText = 'Error fetching Instance ID';
+            });
+    </script>
 </body>
 </html>
